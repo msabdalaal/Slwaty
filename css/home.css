@@ -1,234 +1,232 @@
 *{
 
-  -webkit-box-sizing:border-box ;
-  -moz-box-sizing:border-box ;
-  box-sizing: border-box;
-  margin:0;
-  padding: 0;
-}
-html{
-  scroll-behavior: smooth;
-  height: 100vh;
-  overflow: hidden;
-}
-body{
-  font-family: 'Cairo', sans-serif;
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  background: linear-gradient(180deg, #3EC0E9 0%, #347589 100%);
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-a{
-  text-decoration: none;
-  color:black;
-}
-ul{
-  list-style: none;
-}
-.header{
-  color: white;
-  top: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 0 1rem;
-  align-items: center;
-  width: 100%;
-  height: 6.438rem;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.57) 0%, rgba(196, 196, 196, 0) 100%);
-}
-.header h1{
-  font-style: normal;
-font-weight: 700;
-font-size: 1.15rem;
-text-align: center;
-filter: drop-shadow(0rem 0.094rem 0.094rem rgba(0, 0, 0, 0.25));
-color: #FFFFFF;
-}
-.header i{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  border: 0.2rem solid white;
-  border-radius: 50%;
-  width: 3.125rem;
-  height: 3.125rem;
-  font-size: 1.5rem;
-  filter: drop-shadow(0rem 0.094rem 0.094rem rgba(0, 0, 0, 0.25));
-
-}
-.container{
-  width: calc(100% - 02rem);
-}
-.container .label{
-  font-style: normal;
-  font-weight: 700;
-  font-size: 1.533rem;
-  filter: drop-shadow(0rem 0.094rem 0.094rem rgba(0, 0, 0, 0.25));
-  text-align: center;
-  color: #FFFFFF;
-  margin: 1rem;
-}
-.prayer-card{
-  background: #FFFFFF;
-  border-radius: 1.965rem;
-  padding: 0.4rem 1rem;
-}
-.prayer-card .prayer-label{
-  font-style: normal;
-  font-weight: 700;
-  font-size: 1.4rem;
-  text-align: right;
-}
-.prayer-time{
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  flex-direction: row-reverse;
-}
-.prayer-time .time{
-  font-style: normal;
-  font-weight: 700;
-  font-size: 1rem;
-  color: #000000;
-  margin-top: 0.688rem;
-}
-.prayer-time .remaining{
-  font-style: normal;
-  font-weight: 700;
-  font-size: 1rem;
-  color: #000000;
-  margin-top: 0.688rem;
-  padding-right: 2rem;
-}
-.table{
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
-  background: #FFFFFF;
-  border-radius: 1.965rem;
-
-  height: fit-content;
-}
-.table::before{
-  content: "";
-  position: absolute;
-  right: 0;
-  height: 100%;
-  width: 25%;
-  background-color: #6FBDD6;
-  border-radius: 0px 1.965rem 1.965rem 0px;
-}
-.table ul{
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-right: 0.1rem solid black;
-}
-.table ul:last-child{
-  border: 0;
-  color: white;
-}
-.table ul li:last-child{
-  border: 0;
-}
-.table ul li{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-bottom: 0.1rem solid black;
-  height: 3rem;
-  width: 100%;
-  padding: 0.5rem;
-
-  font-style: normal;
+    -webkit-box-sizing:border-box ;
+    -moz-box-sizing:border-box ;
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+  }
+  html{
+    scroll-behavior: smooth;
+    height: 100vh;
+    overflow: hidden;
+  }
+  body{
+    font-family: 'Cairo', sans-serif;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(180deg, #3EC0E9 0%, #347589 100%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  a{
+    text-decoration: none;
+    color:black;
+  }
+  ul{
+    list-style: none;
+  }
+  .header{
+    color: white;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 1rem;
+    align-items: center;
+    width: 100%;
+    height: 6.438rem;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.57) 0%, rgba(196, 196, 196, 0) 100%);
+  }
+  .header h1{
+    font-style: normal;
   font-weight: 700;
   font-size: 1.15rem;
   text-align: center;
-}
-.table ul li input{
-  opacity: 0;
-  position: relative;
-  height: 2.9rem;
-  width: 5rem;
-}
-.table ul li input:checked{
-  opacity: 1;
-}
-.table ul li input:checked::before{
-  content: "";
-  position: absolute;
-  top: 0%;
-  left: -13%;
-  height: 2.9rem;
-  width: 126%;
-  background-color: #6FBDD6;
-}
-.table ul li:last-child input:checked::before{
-  top: -1%;
-  height: 3rem;
-}
-.table ul:nth-child(1) li:last-child input:checked::before{
-  border-radius: 0px 0px 0px 1.965rem;
-}
-.table ul li input:checked::after{
-  content: "\f00c";
-  position: absolute;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  font-size: 2rem;
-  color: #FFFFFF;
-  top: 50%;
-  left: 50%;
-  transform: translate(-20%,-40%);
-  height: 3rem;
-  width: 126%;
-}
-nav{
-position: absolute;
-bottom: 0;
-  height: 4.5rem;
-  width: 100%;
-  background: linear-gradient(180deg, #2D7A93 0%, #1E596B 49.79%, #1C4D5C 100%);
-  box-shadow: 0px 1.91667px 16.4833px rgba(0, 0, 0, 0.25);
-}
-nav ul{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-nav ul li{
-  width: 100%;
-  height: 100%;
-}
-nav ul li .active{
-  background-color:#3db4d8a4;;
-}
-nav ul i{
-  color: #FFFFFF;
-  font-size: 2rem;
-}
-nav ul a{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-nav ul li h1{
-  font-style: normal;
-  font-weight: 700;
-  font-size: 0.688rem;
-  text-align: center;
+  filter: drop-shadow(0rem 0.094rem 0.094rem rgba(0, 0, 0, 0.25));
+color: #FFFFFF;
+  }
+  .header i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: 0.2rem solid white;
+    border-radius: 50%;
+    width: 3.125rem;
+    height: 3.125rem;
+    font-size: 1.5rem;
+    filter: drop-shadow(0rem 0.094rem 0.094rem rgba(0, 0, 0, 0.25));
 
-  color: #FFFFFF;
-}
+  }
+  .container{
+    width: calc(100% - 02rem);
+  }
+  .container .label{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.533rem;
+    filter: drop-shadow(0rem 0.094rem 0.094rem rgba(0, 0, 0, 0.25));
+    text-align: center;
+    color: #FFFFFF;
+    margin: 1rem;
+  }
+  .prayer-card{
+    background: #FFFFFF;
+    border-radius: 1.965rem;
+    padding: 0.4rem 1rem;
+  }
+  .prayer-card .prayer-label{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.4rem;
+    text-align: right;
+  }
+  .prayer-time{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+  }
+  .prayer-time .time{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #000000;
+    margin-top: 0.688rem;
+  }
+  .prayer-time .remaining{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #000000;
+    margin-top: 0.688rem;
+    padding-right: 2rem;
+  }
+  .table{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+    background: #FFFFFF;
+    border-radius: 1.965rem;
+
+    height: fit-content;
+  }
+  .table::before{
+    content: "";
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 25%;
+    background-color: #6FBDD6;
+    border-radius: 0px 1.965rem 1.965rem 0px;
+  }
+  .table ul{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 0.1rem solid black;
+  }
+  .table ul:last-child{
+    border: 0;
+    color: white;
+  }
+  .table ul li:last-child{
+    border: 0;
+  }
+  .table ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0.1rem solid black;
+    height: 3rem;
+    width: 100%;
+    padding: 0.5rem;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.15rem;
+    text-align: center;
+  }
+  .table ul li input{
+    opacity: 0;
+    position: relative;
+    height: 2.9rem;
+    width: 5rem;
+  }
+  .table ul li input:checked{
+    opacity: 1;
+  }
+  .table ul li input:checked::before{
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: -13%;
+    height: 2.9rem;
+    width: 126%;
+    background-color: #6FBDD6;
+  }
+  .table ul li:last-child input:checked::before{
+    top: -1%;
+    height: 3rem;
+  }
+  .table ul:nth-child(1) li:last-child input:checked::before{
+    border-radius: 0px 0px 0px 1.965rem;
+  }
+  .table ul li input:checked::after{
+    content: "\f00c";
+    position: absolute;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 2rem;
+    color: #FFFFFF;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+nav{
+  position: absolute;
+  bottom: 0;
+    height: 4.5rem;
+    width: 100%;
+    background: linear-gradient(180deg, #2D7A93 0%, #1E596B 49.79%, #1C4D5C 100%);
+    box-shadow: 0px 1.91667px 16.4833px rgba(0, 0, 0, 0.25);
+  }
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  nav ul li{
+    width: 100%;
+    height: 100%;
+  }
+  nav ul li .active{
+    background-color:#3db4d8a4;;
+  }
+  nav ul i{
+    color: #FFFFFF;
+    font-size: 2rem;
+  }
+  nav ul a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  nav ul li h1{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 0.688rem;
+    text-align: center;
+
+    color: #FFFFFF;
+  }
