@@ -21,8 +21,15 @@ close.addEventListener("click", () => {
 let table = document.querySelector("table");
 
 table.addEventListener("click", (e) => {
-  if (e.target.classList.contains("status")) {
-    e.target.classList.toggle("check");
+  if (e.target.classList.contains("check")) {
+    e.target.classList.remove("check");
+  } else if (e.target.classList.contains("status")) {
+    for (let i = 0; i < 3; i++) {
+      e.target.parentElement.parentElement.children[
+        i
+      ].children[0].classList.remove("check");
+    }
+    e.target.classList.add("check");
   }
 });
 //===============
