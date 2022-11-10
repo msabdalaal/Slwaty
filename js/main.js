@@ -18,6 +18,12 @@ close.addEventListener("click", () => {
   profileMenu.classList.toggle("hide");
 });
 
+dimmer.addEventListener("click", () => {
+  dimmer.classList.toggle("hide");
+  close.classList.toggle("hide");
+  profileMenu.classList.toggle("hide");
+});
+
 let table = document.querySelector("table");
 
 table.addEventListener("click", (e) => {
