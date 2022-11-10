@@ -32,7 +32,7 @@ setInterval(() => {
   const prayerTimes = async () => {
     try {
       let fetched = await fetch(
-        `http://api.aladhan.com/v1/timingsByAddress?address=${city}`
+        `https://api.aladhan.com/v1/timingsByAddress?address=${city}`
       );
       return await fetched.json();
     } catch (error) {
