@@ -28,16 +28,23 @@
         <ul>
           <li><a href="profile.html">الملف الشخصي</a></li>
           <li><a href="index.html">تسجيل الخروج</a></li>
+          <li>
+            <select name="city" id="city">
+              <option value="Giza">Giza</option>
+              <option value="Cairo">Cairo</option>
+              <option value="alexandria-egypt">Alexandria</option>
+            </select>
+          </li>
         </ul>
       </div>
     </header>
     <main class="container">
       <h1 class="label firstLabel">الصلاة القادمة</h1>
       <div class="prayer-card">
-        <h1 class="prayer-label">صلاة العصر</h1>
+        <h1 class="prayer-label" id="nextPrayer">Loading</h1>
         <div class="prayer-time">
           <h1 class="time">... باقي من الزمن</h1>
-          <h1 class="remaining">2 ساعة و 15 دقيقة</h1>
+          <h1 class="remaining" id="timeRemaining">Loading</h1>
         </div>
       </div>
       <h1 class="label">جدول متابعة الصلاة</h1>
