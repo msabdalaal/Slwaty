@@ -112,7 +112,7 @@ setInterval(() => {
         minutesRemaining = Math.ceil((time / 60 - hoursRemaining) * 60);
       }
       nextPrayerLabel.innerHTML = `${res[0]} صلاة ال`;
-      timeRemainingLabel.innerHTML = `${minutesRemaining} ساعة و ${hoursRemaining} دقيقة`;
+      timeRemainingLabel.innerHTML = `${hoursRemaining} ساعة و ${minutesRemaining} دقيقة`;
     });
   }
   setInterval(remainingTime(), 1000);
